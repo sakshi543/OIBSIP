@@ -1,1 +1,191 @@
-<p>Hello world</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tranquil Flames - Aroma Candles</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background: #7a644e;
+      color: #fff;
+      padding: 5px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    nav img {
+      width: 50px; /* Adjust the size of the logo */
+      margin-right: 20px;
+      border-radius: 25px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    .account-option {
+      font-size: 1.2em;
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .account-option:not(:last-child) {
+      margin-right: 20px; /* Adjust the space between items */
+    }
+
+
+    .account-option:hover {
+      color: #e65c00;
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5em;
+    }
+
+    section {
+      padding: 50px;
+      text-align: left; /* Align text content to the left */
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #ff6600;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #e65c00;
+    }
+
+    .product-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 5px 0;
+        text-align: center;
+        display: none;
+      }
+
+      nav a.show {
+        display: block;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+    }
+
+    @media (min-width: 769px) {
+      nav {
+        justify-content: flex-end;
+      }
+
+      nav a {
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <img src="candle_logo.png" alt="Logo">
+      <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+      <nav>
+        <a href="#" class="account-option">Home</a>
+        <a href="#" class="account-option">Products</a>
+        <a href="#" class="account-option">About</a>
+        <a href="#" class="account-option">Contact</a>
+        <a href="#" class="account-option">My Account</a>
+      </nav>
+    </nav>
+  </header>
+
+  <section>
+    <div class="container">
+      <img class="product-image" src="candle4.jpg" alt="Aroma Candle Image">
+      <h2>About Tranquil Flames</h2>
+      <p>Discover the perfect blend of fragrances crafted to create a calming atmosphere. Our aroma candles are made with the finest ingredients to provide a truly tranquil experience.</p>
+      <a href="#" class="cta-button">Shop Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Tranquil Flames. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var navLinks = document.querySelectorAll('.account-option');
+      navLinks.forEach(function(link) {
+        link.classList.toggle('show');
+      });
+    }
+  </script>
+
+</body>
+</html>
