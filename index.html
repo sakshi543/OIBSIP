@@ -90,6 +90,7 @@
 
     .cta-button {
       display: inline-block;
+      align-items: center;
       padding: 15px 30px;
       font-size: 1.2em;
       background-color: #ff6600;
@@ -111,29 +112,64 @@
     }
 
     footer {
-      background: #333;
+      background: #000000;
       color: #fff;
       padding: 10px 0;
       text-align: center;
     }
-    .container1 {
-      background-color: #171515;
-      max-width: 900px;
-      margin-left: 10px;
-      display: flex;
-      align-items: center;
-      width: 100%;
-      justify-content: space-between;
-      padding: 10px;
-      box-sizing: border-box;
-    }
-    .product2
-    {
-      max-height: 400px;
-      border-radius: 10px;
-    }
-    /* Add this to your existing styles */
+/* ... (Your existing styles) */
 
+.container1 {
+  background-color: #bebebf;
+  display: flex;
+  flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.product2 {
+  max-height: 400px;
+  border-radius: 10px;
+  width: 100%; /* Set width to 100% for smaller screens */
+  object-fit: cover;
+  margin-bottom: 15px; /* Add margin for better spacing */
+}
+
+.text1 {
+  flex: 1; /* Use all available width */
+  font-size: 1.2em;
+  color: #ffffff;
+  line-height: 1.6;
+   background-image: url("smoke-effect.png");
+  background-size: cover; /* Ensure the background image covers the entire div */
+  background-position: center; /* Center the background image */
+  padding: 15px; /* Add padding for better spacing */
+  box-sizing: border-box;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* ... (Your existing styles) */
+
+/* Add this to your existing media queries */
+
+@media (max-width: 768px) {
+  .container1 {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: stretch; /* Stretch items to fill the container width */
+  }
+
+  .product2 {
+    max-width: none; /* Remove max-width for smaller screens */
+  }
+
+  .text1 {
+    margin-top: 15px; /* Add margin for better spacing */
+  }
+}
 #product-details {
   background-color: #fff;
   padding: 50px 0;
@@ -165,15 +201,36 @@
 }
 
 .customer-reviews {
+  display: flex;
+  overflow: hidden;
   text-align: center;
+  padding: 30px;
+}
+.review {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 0 0 auto; /* Prevent reviews from shrinking to fit */
+  width: 300px; /* Set a fixed width for each review card */
+  margin-right: 20px; /* Adjust the spacing between reviews */
+  transition: transform 0.3s ease;
 }
 
-.review {
-  margin: 20px 0;
+.review:hover {
+  transform: scale(1.05); /* Add a slight scale effect on hover */
 }
 
 .review h3 {
   color: #333;
+  margin-bottom: 10px;
+}
+
+.review p {
+  color: #555;
+  line-height: 1.6;
 }
 
     @media (max-width: 768px) {
@@ -228,7 +285,8 @@
     <div class="container">
       <img class="product-image" src="candle4.jpg" alt="Aroma Candle Image">
       <h2>About Tranquil Flames</h2>
-      <p>Discover the perfect blend of fragrances crafted to create a calming atmosphere. Our aroma candles are made with the finest ingredients to provide a truly tranquil experience.</p>
+      <p>Discover the perfect blend of fragrances crafted to create a calming atmosphere. 
+        <br>Our aroma candles are made with the finest ingredients to provide a truly tranquil experience.</p>
       <a href="#" class="cta-button">Shop Now</a>
     </div>
   </section>
@@ -238,8 +296,11 @@
         <img class="product2" src="candle5.jpg" alt="Aroma-candle">
       </div>
       <div class="text1">
-        <p>xhsdefrgtbhynjuiklo
+        <p><b>Now with new Fragrances</b>
         </p>
+      </div>
+      <div>
+        <img class="product2" src="candle6.jpg" alt="Aroma-candle">
       </div>
     </div>
   </section>
@@ -271,16 +332,32 @@
         <li>Made in India</li>
       </ul>
     </div>
-
+    <h2>Customer Reviews</h2>
+      <br><br>
     <div class="customer-reviews">
-      <h2>Customer Reviews</h2>
       <div class="review">
         <h3>John Doe</h3>
-        <p>"This aroma candle is amazing! The fragrance is long-lasting, and I love that it's cruelty-free. Definitely worth the purchase."</p>
+        <p>"A This aroma candle is amazing! The fragrance is long-lasting, and I love that it's cruelty-free. Definitely worth the purchase."</p>
       </div>
       <div class="review">
         <h3>Jane Smith</h3>
-        <p>"I bought this candle for my home office, and it creates a peaceful atmosphere. The quality is top-notch, and I appreciate the vegan ingredients."</p>
+        <p>"B I bought this candle for my home office, and it creates a peaceful atmosphere. The quality is top-notch, and I appreciate the vegan ingredients."</p>
+      </div>
+      <div class="review">
+        <h3>John Doe</h3>
+        <p>"C This aroma candle is amazing! The fragrance is long-lasting, and I love that it's cruelty-free. Definitely worth the purchase."</p>
+      </div>
+      <div class="review">
+        <h3>Jane Smith</h3>
+        <p>"D I bought this candle for my home office, and it creates a peaceful atmosphere. The quality is top-notch, and I appreciate the vegan ingredients."</p>
+      </div>
+      <div class="review">
+        <h3>John Doe</h3>
+        <p>"E This aroma candle is amazing! The fragrance is long-lasting, and I love that it's cruelty-free. Definitely worth the purchase."</p>
+      </div>
+      <div class="review">
+        <h3>Jane Smith</h3>
+        <p>"F I bought this candle for my home office, and it creates a peaceful atmosphere. The quality is top-notch, and I appreciate the vegan ingredients."</p>
       </div>
       <!-- Add more reviews as needed -->
     </div>
@@ -299,6 +376,25 @@
         link.classList.toggle('show');
       });
     }
+    
+    // Rotate reviews every 3 seconds
+let currentIndex = 0;
+const reviews = document.querySelectorAll('.review');
+
+function rotateReviews() {
+  // Move the current review out of view
+  reviews[currentIndex].style.transform = 'translateX(-100%)';
+  
+  // Increment the index or reset to 0 if the last review
+  currentIndex = (currentIndex + 1) % reviews.length;
+  
+  // Move the next review into view
+  reviews[currentIndex].style.transform = 'translateX(0)';
+}
+
+// Call rotateReviews function every 3 seconds
+setInterval(rotateReviews, 3000);
+
   </script>
 
 </body>
